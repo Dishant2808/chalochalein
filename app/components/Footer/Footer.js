@@ -155,10 +155,10 @@ export default function Footer() {
             </div>
           </div>
         </div>
-
+{/* dsss */}
         <div className={styles.footer_bottom}>
           <p>Copyright © 2024 Chalo Chalein</p>
-          <p>Design & Developed by <Link href='https://ishav.vercel.app' target="_blank">Ishav Bhatt</Link></p>
+          <p>Design & Developed by <Link href='https://krishna-webworks.vercel.app/' target="_blank">Krishna webworks</Link></p>
         </div>
       </div>
     </footer>

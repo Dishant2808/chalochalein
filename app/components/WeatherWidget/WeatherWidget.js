@@ -63,7 +63,7 @@ const WeatherWidget = ({ city, latitude, longitude, apiKey }) => {
                 return <WiDaySunny />;
         }
     };
-    console.log(weatherData);
+    // console.log(weatherData);
     return (
         <div>
             {weatherData && (
