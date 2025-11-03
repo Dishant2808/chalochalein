@@ -1,0 +1,103 @@
+// Accordion.module.scss
+@import '../../styles/settings/_settings';
+
+.accordionItem {
+  margin-bottom: 16px;
+  border: 1px solid $light-gray;
+  padding: 10px 20px;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: height 0.5s ease;
+  /* Add transition for height */
+
+  &.open {
+    height: auto;
+    /* Auto height when open */
+  }
+
+  .accordionHeader {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+
+    .accordionQuestion {
+      font-size: 18px;
+      line-height: 22px;
+      flex-grow: 1;
+
+      @media only screen and (max-width: 768px) {
+        font-size: 16px;
+        width: 90%;
+      }
+    }
+
+    .accordion_btn {
+      
+      .accordionIcon {
+        width: 32px;
+        height: 32px;
+        background: #dbe2e1;
+        border: none;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        justify-content: center;
+        transition: background-color 0.5s ease;
+        /* Add transition for background color */
+
+        span {
+          font-size: 20px;
+          font-weight: bold;
+        }
+
+        @media only screen and (max-width: 768px) {
+          width: 30px;
+          height: 30px;
+          span {
+            font-size: 16px;
+            font-weight: bold;
+          }
+        }
+      }
+
+      .accordionIcon.opened {
+        background: $primary-color;
+        color: $white-color;
+
+        .accordionIcon {
+          background: red;
+          /* Change to the desired color when opened */
+        }
+      }
+
+      @media only screen and (max-width: 768px) {
+        font-size: 16px;
+        width: 10%;
+      }
+    }
+    @media only screen and (max-width: 768px) {
+      align-items: flex-start;
+    }
+  }
+
+  .accordionContent {
+    overflow: hidden;
+    transition: opacity 0.5s ease;
+    /* Add transition for opacity */
+
+    .contentInner {
+      padding: 10px 0;
+
+      @media only screen and (max-width: 768px) {
+        font-size: 12px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    padding: 10px 8px;
+  }
+}

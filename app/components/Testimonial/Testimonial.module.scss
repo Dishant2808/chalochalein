@@ -1,0 +1,40 @@
+@import '../../styles/settings/_settings';
+
+.testimonial_sec {
+    padding-bottom: 30px;
+    .testimonial_card {
+        .testimonial_card_quote {
+            font-size: 25px;
+            color: $primary-color;
+        }
+
+        .testimonial_content {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 4;
+            line-height: 20px;
+            letter-spacing: 0.5px;
+            margin: 20px 0;
+        }
+
+        .testimonial_name_icon {
+            margin-top: 10px;
+
+            .testimonial_icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 45px;
+                width: 45px;
+                border-radius: 50%;
+                color: $white-color;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        margin-top: 10px;
+    }
+}

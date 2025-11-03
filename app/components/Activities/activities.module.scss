@@ -1,0 +1,99 @@
+@import "../../styles/settings/_settings";
+
+.activity_card_main {
+    display: flex;
+    gap: 30px;
+
+    .activity_card {
+        width: 33%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        border-radius: 5px;
+        overflow: hidden;
+
+        .card_image {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+
+            img {
+                transition: transform 0.3s;
+                object-fit: cover;
+            }
+        }
+
+        .card_content {
+            text-align: center;
+            position: absolute;
+            bottom: 30px;
+            width: 90%;
+            background: white;
+            padding: 10px;
+            height: 70px;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            transition: all 0.5s;
+
+            .card_content_icon {
+                height: 40px;
+                width: 40px;
+                font-size: 40px;
+                transition: all 0.5s;
+            }
+
+            vr {
+                height: 30px;
+                width: 1px;
+                background: $gray-color;
+                margin: 0 10px;
+            }
+
+            a {
+                font-size: 18px;
+                font-weight: 600;
+                font-family: "Poppins", sans-serif;
+            }
+        }
+
+        &:hover {
+            .card_content {
+                background-color: $primary-color;
+                color: white;
+
+                .card_content_icon {
+                    color: white;
+                }
+            }
+
+            .card_image {
+                img {
+                    transform: scale(1.05);
+                }
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            .card_image {
+                height: 300px;
+            }
+
+            .card_content {
+                a {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        flex-wrap: wrap;
+
+        .activity_card {
+            width: 100%;
+        }
+    }
+
+}

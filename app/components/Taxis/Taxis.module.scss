@@ -1,0 +1,322 @@
+@import '../../styles/settings/_settings';
+
+.main_taxis_sec {
+    background-color: $bg;
+    padding: 40px 0;
+
+    .main_taxis {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .main_taxis_child {
+            width: 49%;
+            display: flex;
+            position: relative;
+            align-items: center;
+            background-color: $white-color;
+            padding: 20px 0;
+
+            .main_taxis_child_image {
+                padding: 0 10px;
+
+                img {
+                    object-fit: contain;
+                }
+            }
+
+            a {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+
+            .taxi_content {
+                padding: 0 10px;
+
+                h4 {
+                    font-size: 20px;
+                    font-family: 'Poppins', sans-serif;
+                    line-height: 24px;
+                    font-weight: 500;
+                    margin-bottom: 5px;
+                }
+
+                // p {
+                //     margin: 10px 0;
+                // }
+            }
+
+            .taxi_btn {
+                padding: 0 20px;
+                border: none;
+                background: transparent;
+                transition: 0.3s;
+                font-size: 22px;
+                transition: transform 0.5s;
+            }
+
+            &:hover {
+                .taxi_btn {
+                    transform: translateX(10px);
+                }
+            }
+
+        }
+
+        @media screen and (max-width: 768px) {
+            flex-wrap: wrap;
+
+            .main_taxis_child {
+                flex-wrap: wrap;
+                width: 100%;
+
+                .main_taxis_child_image {
+                    // width: 100%;
+
+                    img {
+                        height: 100px;
+                        width: 100%;
+                    }
+                }
+
+                .taxi_content {
+                    padding-top: 16px;
+                }
+
+                .taxi_btn {
+                    padding: 16px 10px 0 10px;
+                }
+            }
+        }
+    }
+}
+
+.taxi_service_overview {
+    .text_container {
+        .showhide_Btn {
+            font-size: 14px;
+            border: none;
+            background: transparent;
+            color: $primary-color;
+            font-weight: 700;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+        }
+
+    }
+
+    .key_features {
+        ul {
+            font-size: 14px;
+            list-style: square;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+
+            li {
+                list-style-type: none;
+                position: relative;
+                padding-left: 18px;
+                margin: 10px 0;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 10px;
+                    width: 7px;
+                    height: 7px;
+                    background-color: $primary-color;
+                }
+            }
+        }
+
+        p {
+            margin: 10px 0;
+        }
+    }
+
+    .mainly_taxi_service {
+        margin: 20px 0;
+
+        .mainly_taxi_service_main {
+            display: flex;
+            gap: 10px;
+
+            .mainly_taxi_service_main_child {
+                position: relative;
+                height: 300px;
+                width: 33%;
+                border-radius: 8px;
+                overflow: hidden;
+
+                img {
+                    transition: transform 0.5s;
+                    object-fit: cover;
+                    transform: scale(1);
+                }
+
+                .mainly_taxi_service_content {
+                    position: absolute;
+                    height: 130px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    flex-direction: column;
+                    text-align: center;
+                    width: 100%;
+                    background: linear-gradient(to top, $black-color, #ffffff0a);
+                    bottom: 0;
+
+                    h4 {
+                        color: white;
+                        white-space: pre-line;
+                        line-height: 20px;
+                        font-weight: 400;
+                        margin-bottom: 16px;
+                    }
+
+                    a {
+                        margin: 10px;
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 3px;
+                    }
+                }
+
+                &:hover {
+                    img {
+                        transform: scale(1.05);
+                    }
+                }
+            }
+
+            @media screen and (max-width: 600px) {
+                flex-wrap: wrap;
+
+                .mainly_taxi_service_main_child {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.benefits_sec {
+    .benefits_sec_main {
+        display: flex;
+        gap: 20px;
+
+        .benefits_sec_main_child {
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            padding: 20px 10px;
+            box-shadow: 0 0 1px 1px $light-gray;
+
+            .benefits_sec_main_child_image {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: $primary-color;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $white-color;
+                font-size: 24px;
+                transition: .5s;
+            }
+
+            .benefits_content {
+                h4 {
+                    margin: 10px 0;
+                }
+            }
+
+            &:hover {
+                box-shadow: 0 0 2px 2px $light-gray;
+
+                .benefits_sec_main_child_image {
+                    background-color: $secoundary-color;
+                }
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            flex-wrap: wrap;
+
+            .benefits_sec_main_child {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.popular_routes {
+    .popular_routes_main {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        .popular_routes_child {
+            border: 1px solid $light-gray;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: calc(33% - 20px);
+            position: relative;
+
+            a {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+
+            .popular_routes_child_image {
+                width: 80px;
+                height: 80px;
+                position: relative;
+                overflow: hidden;
+                border-radius: 3px;
+
+                img {
+                    transition: transform 0.5s;
+                    object-fit: cover;
+                    transform: scale(1);
+                }
+
+            }
+
+            .popular_routes_child_right {
+                p {
+                    font-size: 15px;
+                }
+
+                span {
+                    font-size: 13px;
+                    color: $dark-grey;
+                    // color: $primary-color;
+                }
+            }
+
+            &:hover {
+                .popular_routes_child_image {
+                    img {
+                        transform: scale(1.05);
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            flex-wrap: wrap;
+
+            .popular_routes_child {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+@import '../../styles/settings/_settings';
+
+.call_now_button {
+    position: fixed;
+    left: 0;
+    top: 50px;
+    background-color: $primary-color;
+    color: #fff;
+    padding: 10px 12px;
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 9999;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    .phone_number {
+        display: none;
+    }
+
+    &.open {
+        width: fit-content;
+        // padding: 16px;
+        justify-content: flex-start;
+        cursor: default;
+
+        .phone_number {
+            display: block;
+        }
+    }
+}

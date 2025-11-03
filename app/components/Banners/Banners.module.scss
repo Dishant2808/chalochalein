@@ -1,0 +1,271 @@
+@import '../../styles/settings/_settings';
+
+.desktop_banner {
+  display: block;
+
+  .home_banner {
+    width: 100%;
+    height: 550px;
+    position: relative;
+
+    img {
+      object-fit: cover;
+    }
+
+    .home_banner_content {
+      width: 100%;
+      z-index: +1;
+      margin: 0 auto;
+      position: absolute;
+      bottom: 50px;
+
+      h2 {
+        color: $white-color;
+        font-size: 28px;
+        line-height: 30px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        margin-bottom: 5px;
+      }
+
+      p {
+        color: $white-color;
+        margin-bottom: 16px;
+      }
+
+      a {
+        display: inline-block;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      background: #0000008a;
+      // background: linear-gradient(0deg,
+      //     rgb(0 0 0 / 58%) 0%,
+      //     rgb(0 0 0 / 3%) 49.87%);
+      height: 100%;
+      width: 100%;
+      bottom: 0;
+    }
+
+    @media only screen and (max-width: 768px) {
+      // height: 400px;
+      // width: 100%;
+
+      .home_banner_content {
+        padding: 0 12px;
+        bottom: 30px;
+
+        h2 {
+          color: white;
+        }
+      }
+    }
+  }
+
+  // @media screen and (max-width: 600px) {
+  //   display: none;
+  // }
+}
+
+.mobile_banner {
+  // display: none;
+
+  .home_banner {
+    width: 100%;
+    height: 450px;
+    position: relative;
+
+    img {
+      object-fit: cover;
+    }
+
+    .home_banner_content {
+      width: 100%;
+      height: auto;
+      // text-align: center;
+      z-index: +1;
+      margin: 0 auto;
+      position: absolute;
+      padding: 0 12px;
+      bottom: 40px;
+
+      h2 {
+        margin: 0;
+        padding: 0;
+      }
+
+      p {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 14px;
+
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      background: linear-gradient(0deg,
+          rgb(0 0 0 / 77%) 0%,
+          rgb(0 0 0 / 0%) 49.87%);
+      height: 200px;
+      width: 100%;
+      bottom: 0;
+    }
+  }
+
+  div {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.book_taxi_banner {
+  .book_taxi_banner_main {
+    // background: linear-gradient(to right, $secoundary-color, $primary-color);
+    height: 300px;
+    border-radius: 5px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    .book_taxi_banner_main_content {
+      width: 100%;
+      position: absolute;
+      bottom: 20px;
+      z-index: +1;
+      padding: 0 40px;
+
+      h2 {
+        color: $white-color;
+        font-size: 24px;
+        font-family: 'Poppins', sans-serif;
+        line-height: 28px;
+        font-weight: 400;
+      }
+
+      p {
+        color: $primary-color;
+        margin: 10px 0;
+      }
+
+      @media screen and (max-width: 768px) {
+        bottom: 0;
+        background: linear-gradient(to top, #000000, #ffffff00);
+        padding: 0 20px;
+
+        a {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      top: 0;
+      background: linear-gradient(to right, #0000008f, transparent);
+    }
+  }
+}
+
+.page_top_banner {
+  position: relative;
+  height: 400px;
+  width: 100%;
+
+  img {
+    object-fit: cover;
+  }
+
+  .page_top_banner_content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgb(0 0 0 / 81%), rgb(0 0 0 / 5%));
+    height: 150px;
+    color: $white-color;
+
+    h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      margin-top: 10px;
+      font-size: 28px;
+      margin-bottom: 5px;
+      color: $white-color;
+    }
+
+    p {
+      color: $white-color;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background: url('/vectors/banner-bottom.png');
+    height: 50px;
+    background-repeat: no-repeat;
+    width: 100%;
+    bottom: 0;
+    background-position: center;
+    background-size: cover;
+    @media only screen and (max-width: 768px) {
+      height: 40px;
+
+    }
+  }
+
+}
+
+.cab_banner {
+  width: 100%;
+  justify-content: space-between;
+  background-color: #dbe2e1;
+  border-radius: 6px;
+  align-items: center;
+  height: 230px;
+  padding: 20px;
+
+  .cab_banner_left {
+    width: 50%;
+
+    p {
+      padding: 10px 0px;
+    }
+  }
+
+  .cab_banner_right {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+
+    .cab_banner_right_image {
+      width: 255px;
+      height: 210px;
+      position: relative;
+      
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    flex-wrap: wrap;
+    height: auto;
+    flex-direction: column-reverse;
+
+    .cab_banner_left,
+    .cab_banner_right {
+      width: 100%;
+      justify-content: flex-start;
+    }
+
+    .cab_banner_right_image {
+      width: 100%;
+    }
+  }
+}

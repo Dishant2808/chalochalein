@@ -1,0 +1,149 @@
+@import '../settings/_settings';
+
+.taxi_services {
+    .taxi_services_top {
+        display: flex;
+        gap: 20px;
+
+        .taxi_services_top_left {
+            width: 70%;
+        }
+
+        .taxi_services_top_right {
+            width: 30%;
+
+            .taxi_services_top_right_inner {
+                position: sticky;
+                top: 30px;
+            }
+
+        }
+
+        @media screen and (max-width: 600px) {
+            flex-wrap: wrap;
+
+            .taxi_services_top_left,
+            .taxi_services_top_right {
+                width: 100%;
+            }
+        }
+    }
+
+    .taxis_listing {
+        .taxis_listing_main {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+
+            .taxis_listing_child {
+                width: calc(25% - 20px);
+                box-sizing: border-box;
+                border-radius: 8px;
+                border: 1px solid $light-gray;
+                overflow: hidden;
+
+                .taxis_listing_child_image {
+                    height: 190px;
+                    width: 100%;
+                    position: relative;
+                    overflow: hidden;
+
+                    img {
+                        transition: transform 0.5s;
+                        object-fit: contain;
+                    }
+                }
+
+                .taxis_listing_child_content {
+                    padding: 10px;
+
+                    h4 {
+                        span {
+                            font-size: 12px;
+                            font-weight: 400;
+                        }
+                    }
+
+                    ul {
+                        font-size: 12px;
+                        list-style: square;
+                        padding-top: 8px;
+                        padding-bottom: 15px;
+                        font-family: 'Poppins', sans-serif;
+                        display: flex;
+                        gap: 8px;
+                        flex-wrap: wrap;
+
+                        li {
+                            list-style-type: none;
+                            position: relative;
+                            padding-left: 13px;
+
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                left: 0;
+                                top: 6px;
+                                width: 7px;
+                                height: 7px;
+                                background-color: $primary-color;
+                            }
+                        }
+                    }
+
+                }
+
+                &:hover {
+                    .taxis_listing_child_image {
+                        img {
+                            transform: scale(1.02);
+                        }
+                    }
+                }
+
+                @media (min-width: 320px) and (max-width: 480px) {
+                    width: calc(50% - 5px);
+
+                    .taxis_listing_child_image {
+                        height: 100px;
+                    }
+                    .taxis_listing_child_content {
+                        ul {
+                            font-size: 10px;
+                            gap: 5px;
+    
+                            li {
+                                padding-left: 10px;
+                                &::after {
+                                    top: 5px;
+                                    width: 5px;
+                                    height: 5px;
+                                }
+                            }
+                        }
+                        a {
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+
+            @media screen and (max-width: 600px) {
+                flex-wrap: wrap;
+                gap: 10px;
+                justify-content: space-between;
+
+                .taxis_listing_child {
+                    width: calc(50% - 5px);
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .taxiservices_taxi_services .taxiservices_taxis_listing.taxiservices_taxis_listing_main .taxiservices_taxis_listing_child .common_animate_btn {
+        font-size: 12px;
+    }
+}

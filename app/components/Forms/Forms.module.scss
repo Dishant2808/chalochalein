@@ -1,0 +1,79 @@
+@import '../../styles//settings/_settings';
+
+.book_taxi_form {
+    h4 {
+        background-color: $primary-color;
+        color: $white-color;
+        font-size: 16px;
+        font-weight: 400;
+        padding: 20px 0;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        text-align: center;
+    }
+
+    form {
+        text-align: center;
+        padding: 20px 12px;
+        border: 1px solid $light-gray;
+
+        input,
+        select {
+            width: 100%;
+            margin-bottom: 14px;
+            padding: 10px;
+            border: none;
+            font-size: 13px;
+            background-color: $light-gray;
+            color: $title-color;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            height: 40px;
+        }
+
+        .sending_msg {
+            font-size: 13px;
+            color: $secoundary-color;
+            text-align: left;
+            margin-top: 10px;
+        }
+    }
+
+    .date_picker {
+        font-size: 13px;
+        color: $title-color;
+    }
+
+    @media screen and (max-width:767px) {
+        margin-top: 20px;
+    }
+
+}
+
+
+
+.info_contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $light-gray;
+    padding: 10px;
+    margin-top: 15px;
+
+    p {
+        color: $primary-color;
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+    a {
+        color: $primary-color;
+        font-size: 16px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+    }
+}

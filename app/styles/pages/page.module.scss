@@ -1,0 +1,84 @@
+@import '../settings/_settings';
+
+.popular_destinations,
+.popular_tours {
+
+    .popular_destinations_cards,
+    .popular_tours_cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+
+        .popular_destinations_card,
+        .popular_tour_card {
+            width: calc(25% - 20px);
+            box-shadow: 0 8px 16px 0 rgba(15, 41, 77, 0.06);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        // @media only screen and (max-width: 768px) {
+        //     width: 100%;
+        // }
+
+    }
+
+
+    @media only screen and (min-width: 320px) and (max-width: 480px) {
+        .popular_destinations_cards {
+            gap: 5px;
+
+            .popular_destinations_card {
+                width: calc(50% - 5px);
+            }
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        .popular_destinations_cards {
+            gap: 5px;
+
+            .popular_destinations_card {
+                width: calc(50% - 5px);
+            }
+        }
+
+        .popular_tours_cards {
+            .popular_tour_card {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.faq_sec {
+    display: flex;
+
+    .faq_content_main {
+        .faq_sec_left {
+            width: 30%;
+            position: sticky;
+            top: 16px;
+            height: 100%;
+        }
+
+        .faq_sec_right {
+            width: 70%;
+        }
+
+        @media only screen and (max-width: 768px) {
+            flex-wrap: wrap;
+
+            .faq_sec_left {
+                position: unset;
+            }
+
+            .faq_sec_left,
+            .faq_sec_right {
+                width: 100%;
+            }
+        }
+    }
+
+}

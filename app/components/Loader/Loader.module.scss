@@ -1,0 +1,19 @@
+@import '../../styles/settings/_settings';
+
+.loader_overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    background: $white-color;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 99;
+
+    p {
+        margin-top: 10px;
+    }
+}

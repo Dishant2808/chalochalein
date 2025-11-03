@@ -1,0 +1,209 @@
+@import '../../styles/settings/_settings';
+
+// New Page Css
+.header_main {
+  // background-color: $primary-color;
+  padding: 5px 0;
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $white-color;
+    margin: 0 auto;
+
+    .header_logo {
+      a {
+        display: flex;
+        align-items: center;
+
+        img {
+          object-fit: contain;
+
+          @media only screen and (max-width: 768px) {
+            width: 60px;
+            height: 60px;
+          }
+        }
+      }
+    }
+
+    .links {
+      display: flex;
+      /* align-items: center; */
+      gap: 20px;
+      transition: all 0.3s;
+
+      .links_main {
+        display: flex;
+        /* align-items: center; */
+        gap: 20px;
+        transition: all 0.3s;
+
+        a {
+          color: $primary-color;
+          font-family: 'Poppins', sans-serif;
+          font-size: 16px;
+          font-style: normal;
+          line-height: normal;
+          text-decoration: none;
+          display: flex;
+          align-content: center;
+          line-height: 30px;
+
+          &:hover {
+            color: $primary-color;
+          }
+        }
+
+        .header_ancor {
+          display: inline-block;
+          color: $black-color;
+          text-decoration: none;
+          font-size: 16px;
+          line-height: 24px;
+
+          &::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 1px;
+            background: $primary-color;
+            transition: width .4s;
+          }
+
+          &:hover::after {
+            width: 100%;
+          }
+
+          @media only screen and (max-width: 768px) {
+            width: 100%;
+            // height: 100%;
+          }
+
+        }
+      }
+
+      // .cross_btn {
+      //   padding-top: 10px;
+      //   padding-right: 0;
+      //   color: white;
+      // }
+
+      .cross_btn {
+        display: none;
+      }
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+
+      .bar {
+        width: 25px;
+        height: 2px;
+        background-color: $white-color;
+        margin: 3px 0;
+        transition: all 0.3s;
+      }
+    }
+
+    .header_right {
+      a {
+        color: $primary-color;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .links.open {
+        display: block;
+        width: 100vw;
+        inset: 0;
+        position: fixed;
+        background: rgba(0, 0, 0, 0.2823529412);
+        z-index: 9;
+        height: 100%;
+        // animation: slideOut 0.7s ease-in;
+
+        .links_main {
+          width: 70vw;
+          background: $primary-color;
+          height: 100%;
+          position: fixed;
+          right: 0;
+          padding: 10px;
+          display: block;
+
+          a {
+            color: white;
+            margin-bottom: 5px;
+          }
+        }
+
+        .cross_btn {
+          border: none;
+          background-color: transparent;
+          justify-content: flex-end;
+          color: white;
+          width: 100%;
+          font-size: 20px;
+          height: 40px;
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .links.close {
+        animation: slideIn 0.5s ease-out;
+      }
+
+      .links {
+        display: none;
+        // position: absolute;
+        // top: 0;
+        // right: 0;
+        // background-color: #333;
+        // flex-direction: column;
+        // width: 70vw;
+
+        a {
+          line-height: 20px;
+        }
+      }
+
+      .hamburger {
+        display: flex;
+        color: $primary-color;
+        font-size: 30px;
+      }
+
+      // .cross_btn {
+      //   display: flex;
+      //   border: none;
+      //   background-color: transparent;
+      //   justify-content: flex-end;
+      // }
+    }
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}

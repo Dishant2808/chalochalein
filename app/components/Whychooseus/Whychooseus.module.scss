@@ -1,0 +1,71 @@
+@import '../../styles/settings/_settings';
+
+.whychooseus_sec {
+    .whychooseus_sec_main {
+        display: flex;
+        gap: 20px;
+
+        .whychooseus_sec_child {
+            width: 33%;
+            position: relative;
+
+            .whychooseus_sec_child_icon {
+                font-size: 32px;
+                display: flex;
+                align-content: center;
+                margin-bottom: 14px;
+                transition: transform 0.3s ease-in-out;
+            }
+
+            h4 {
+                font-size: 20px;
+                font-family: 'Poppins', sans-serif;
+                line-height: 24px;
+                font-weight: 400;
+            }
+
+            p {
+                margin: 20px 0;
+            }
+
+            .whychooseus_sec_child_ancor {
+                // display: inline-block;
+                color: $black-color;
+                // text-decoration: none;
+                font-size: 14px;
+                line-height: 24px;
+
+                // &::after {
+                //     content: '';
+                //     display: block;
+                //     width: 0;
+                //     height: 1px;
+                //     background:$black-color;
+                //     transition: width .4s;
+                // }
+
+                // &:hover::after {
+                //     width: 100%;
+                // }
+            }
+
+            &:hover {
+                .whychooseus_sec_child_icon {
+                    transform: translateY(-8px); 
+                }
+            }
+            &:hover{
+                .whychooseus_sec_child_ancor{
+                    // width: 100%;
+                    border-bottom: 1px solid black;
+                }
+            }
+        }
+        @media only screen and (max-width: 768px) {
+            flex-wrap: wrap;
+            .whychooseus_sec_child{
+                width: 100%;
+            }
+        }
+    }
+}

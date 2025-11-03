@@ -1,0 +1,77 @@
+@import '../settings/_settings';
+
+.about_us_sec {
+    .about_us_content {
+        width: 100%;
+
+        .left_sec {
+            width: 50%;
+
+            p {
+                margin-bottom: 10px;
+            }
+        }
+
+        .top_sec_content {
+            padding-right: 50px;
+        }
+
+        .bottom_sec_content {
+            padding-left: 50px;
+
+        }
+
+        .right_sec {
+            width: 50%;
+
+            .about_image {
+                height: 350px;
+                width: 100%;
+                position: relative;
+
+                img {
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .about_us_content {
+            flex-wrap: wrap;
+
+            .left_sec,
+            .right_sec {
+                width: 100%;
+            }
+
+            .right_sec {
+                // padding: 10px 0px 20px;
+
+                .about_image {
+                    height: 250px;
+                }
+            }
+
+            .top_sec_content {
+                padding: 0px;
+            }
+
+            .bottom_sec_content {
+                padding: 0px 0px 10px;
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .about_us_content1 {
+        flex-direction: row-reverse;
+    }
+
+    .about_us_content2 {
+        flex-direction: column-reverse;
+        margin-top: 20px;
+    }
+}

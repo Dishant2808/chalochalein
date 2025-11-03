@@ -1,0 +1,276 @@
+@import '../settings/_settings';
+
+.destinations_page {
+    .destinations_cards {
+        // display: flex;
+        // flex-wrap: wrap;
+        // gap: 20px;
+
+        .destinations_page_card {
+            // width: calc(25% - 20px);
+            width: 100%;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 16px 0 rgba(15, 41, 77, 0.06);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+    }
+
+}
+
+.single_destination {
+    .single_destination_parent {
+
+        // flex-wrap: wrap;
+        .single_destination_content {
+            border: 1px solid $light-gray;
+            border-radius: 5px;
+            padding: 0 10px;
+            width: 70%;
+
+            h3 {
+                font-size: 20px;
+                font-family: 'Montserrat', sans-serif;
+                letter-spacing: 1px;
+                margin-bottom: 7px;
+            }
+
+            .destination_top_icons {
+                display: flex;
+                gap: 40px;
+                margin: 20px 0;
+
+                .top_icon_col {
+                    text-align: center;
+
+                    svg {
+                        font-size: 26px;
+                        color: $primary-color;
+                    }
+
+                    h5 {
+                        font-size: 14px;
+                        font-weight: 500;
+                    }
+                }
+
+                @media screen and (max-width: 600px) {
+                    // width: 35%;
+                    flex-wrap: wrap;
+
+                    .top_icon_col {
+                        width: 41%;
+                    }
+                }
+            }
+
+            .destination_overview {
+                margin-bottom: 20px;
+
+                ul {
+                    font-size: 14px;
+                    list-style: square;
+                    padding: 0;
+                    font-family: 'Poppins', sans-serif;
+
+                    li {
+                        list-style-type: none;
+                        position: relative;
+                        padding-left: 18px;
+                        margin: 10px 0;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            top: 10px;
+                            width: 7px;
+                            height: 7px;
+                            background-color: $primary-color;
+                        }
+                    }
+                }
+            }
+
+            @media screen and (max-width: 768px) {
+                width: 100%;
+            }
+        }
+
+        .weather_widget {
+            width: 30%;
+            background-color: $bg;
+            height: 100%;
+            position: sticky;
+            top: 10px;
+            padding: 20px;
+        }
+
+        @media screen and (max-width: 768px) {
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+
+            .weather_widget {
+                position: unset;
+                width: 100%
+            }
+        }
+
+    }
+
+}
+
+.popular_destinations,
+.popular_tours {
+
+    .popular_destinations_cards,
+    .popular_tours_cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+
+        .popular_destinations_card,
+        .popular_destinations_card {
+            width: calc(25% - 20px);
+            box-shadow: 0 8px 16px 0 rgba(15, 41, 77, 0.06);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        @media screen and (max-width: 768px) {
+            flex-wrap: wrap;
+
+            .popular_destinations_card {
+                width: 46%;
+            }
+
+
+        }
+    }
+}
+
+.weather_information {
+    h3 {
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 16px;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    p {
+        margin: 5px 0;
+    }
+
+    .weather_icon {
+        font-size: 54px;
+        height: 54px;
+        width: 54px;
+    }
+}
+
+.seo_content {
+    border: 1px solid $light-gray;
+    border-radius: 5px;
+    padding: 20px;
+
+    h1 {
+        margin-bottom: 8px;
+        font-size: 24px;
+        margin-bottom: 8px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        color: #333;
+    }
+
+    @media screen and (max-width: 768px) {
+
+        padding: 10px;
+
+        h1 {
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+}
+
+.single_blog {
+    .single_blog_parent {
+        .single_blog_parent_left {
+            width: 70%;
+
+            .blog_title {
+                margin-bottom: 10px;
+            }
+
+            .blog_description {
+                margin-bottom: 10px;
+                line-height: 20px;
+                letter-spacing: 0.01px;
+            }
+
+            .blog_content {
+                h3 {
+                    margin-top: 14px;
+                    margin-bottom: 8px;
+                }
+
+                h4 {
+                    margin-bottom: 3px;
+                }
+
+                p {
+                    margin-bottom: 10px;
+                    line-height: 20px;
+                    letter-spacing: 0.01px;
+                }
+            }
+        }
+
+        .single_blog_parent_right {
+            width: 30%;
+            position: sticky;
+            top: 20px;
+            height: 100%;
+
+            .recent_top {
+                background-color: $primary-color;
+                color: white;
+                padding: 10px;
+                border-radius: 10px 10px 0 0;
+
+                h3 {
+                    font-size: 20px;
+                    font-weight: 400;
+                }
+            }
+
+            .recent_bottom {
+                .recent_bottom_main {
+                    margin: 10px 0;
+
+                    .recent_bottom_main_image {
+                        border-radius: 3px;
+                        overflow: hidden;
+                    }
+
+                    p {
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            flex-wrap: wrap;
+
+            .single_blog_parent_left,
+            .single_blog_parent_right {
+                width: 100%;
+            }
+
+        }
+    }
+}
